@@ -1,0 +1,33 @@
+ICONS:
+- react-icons 
+- lucide-react
+
+
+react portal -> https://react.dev/reference/react-dom/createPortal
+- it is used to render a component outside of its parent component hierarchy
+- useful for modals, tooltips, dropdowns, etc.
+- it helps to avoid CSS overflow and z-index issues
+eg: import { createPortal } from 'react-dom';
+funtion Modal({ children }) {
+  return createPortal(
+    <div className="modal">{children}</div>,
+    document.getElementById('modal-root')
+  );
+}
+- here, the Modal component is rendered into a DOM node with the id 'modal-root', which is outside the main app component tree.
+
+
+useId -> https://react.dev/reference/react/useId
+- it is a hook that generates a unique ID for components
+- useful for accessibility attributes like aria-labelledby, aria-describedby, etc.
+- it ensures that IDs are unique across server and client renders, preventing hydration issues
+eg: import { useId } from 'react';
+function InputWithLabel({ label }) {
+  const id = useId();
+  return (
+    <div>
+      <label htmlFor={id}>{label}</label>
+      <input id={id} type="text" />
+    </div>
+  );
+}
