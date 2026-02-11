@@ -1,0 +1,36 @@
+TYPESCRIPT:
+- A superset of JavaScript that adds static types to the language.
+
+Features:
+- Static Typing: Allows developers to define variable types, enabling type checking at compile time.
+- Interfaces: Define custom types and enforce structure on objects.
+- Classes: Supports object-oriented programming with classes, inheritance, and access modifiers.
+- Generics: Enables the creation of reusable components that work with various data types.
+- Modules: Supports modular programming by allowing code to be organized into separate files and namespaces.
+- Type Inference: Automatically infers types based on the assigned values, reducing the need for explicit type annotations.
+- Decorators: Provides a way to add metadata to classes and methods, often used in frameworks like Angular.
+- Advanced Type Features: Includes union types, intersection types, tuple types, and type aliases for more complex type definitions.
+- Tooling Support: Excellent integration with IDEs and build tools, providing features like autocompletion, refactoring, and error checking.
+
+
+tsconfig.json:
+main options:
+- "compilerOptions"
+- "include"
+- "exclude"
+- "files"
+- "references"
+- "extends"
+compilerOptions:
+- "target": Specify ECMAScript target version (e.g., "ES5", "ES6", "ESNext").
+- "module": Specify module code generation (e.g., "commonjs", "es6", "amd").
+- "lib": Specify library files to be included in the compilation.
+- "outDir": Specify output directory for compiled JavaScript files.
+- "rootDir": Specify the root directory of input files.
+- "strict": Enable all strict type-checking options.
+- "esModuleInterop": Enable interoperability between CommonJS and ES Modules.
+- "sourceMap": Generate source map files for debugging.
+- "declaration": Generate corresponding ".d.ts" declaration files.
+
+
+declaration files (.d.ts):- Used to describe the shape of existing JavaScript code to TypeScript.
