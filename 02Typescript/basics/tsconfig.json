@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist", // the dir for complied code
+    "target": "es6", // the target js version
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "strict": false
+  },
+  "include": ["src/**/*.ts"], // this tells what files to include for compile in all inside src dir
+  "exclude": ["node_modules", "dist"],
+  "files": ["src/index.ts"] // this is for when tsc runs only these files included in array compile
+}
