@@ -40,7 +40,7 @@ const Form = () => {
           {...register("name", { required: "Name is required" })}
         />
 
-        <label htmlFor="name">Email: </label>
+        <label htmlFor="email">Email: </label>
         <input
         style={{padding:"5px 5px", width:"50%"}}
           type="email"
