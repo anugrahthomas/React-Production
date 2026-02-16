@@ -1,0 +1,52 @@
+Features of React19
+- own compier
+- no longer worry for memorization
+- own metadata system for SEO optimization, no longer need library like react-helmet
+- directive system, no longer need library like react-router (use client and use server)
+- built-in state management, no longer need library like redux or mobx
+- built-in data fetching, no longer need library like react-query or swr
+- built-in form handling, no longer need library like formik or react-hook-form
+- server components, no longer need library like next.js or remix
+- improve hydration, streaming, suspense, and concurrent features for better performance and user experience
+- 
+New & Improved Hooks
+React 19 adds several new hooks for modern app needs:
+- useActionState – Handles action state (pending, success, error) cleanly.
+- useFormStatus – Lets child components access the parent form’s status.
+- useOptimistic – Built-in support for optimistic UI updates.
+- useDeferredValue – Defers non-urgent UI updates for better responsiveness.
+- (Optional) useEvent – Stable event handler hook that avoids re-creation on every render.
+- React 19 also includes a new experimental use() API that can read async values (e.g. promises) directly in components.
+
+NO LONGER NEED
+- forwardRef which is used to pass refs through components, now React 19 has built-in support for refs without needing this helper.
+- memo which is used to optimize functional components by memoizing their output, now React 19
+- lazy and Suspense which are used for code-splitting and lazy loading components, now React 19 has built-in support for these features without needing these helpers.
+- useContext which is used to access context values in functional components, now React 19 has built-in support for context without needing this hook.
+- memo and useMemo which are used to optimize performance by memoizing values and functions, now React 19 has built-in support for memoization without needing these helpers.
+- useCallback which is used to memoize callback functions, now React 19 has built-in
+- useEffect which is used to perform side effects in functional components, now React 19 has built-in support for side effects without needing this hook.
+
+React 19 use Hook
+- use() is used as async data handling, it can read promises directly
+- instead of using useContext, we can now pass use(context) directly in the component to access context values
+
+Actions in React 19
+- async functions for simple form actions, can utilize on server and client
+
+useFormStatus Hook
+- gives information about last submission status.
+- can be used to disable submit button while form is submitting, show success or error messages, etc.
+- can be used in child components to access parent form status, allowing for better component composition and separation of concerns.
+const {pending, data, method, action} = useFormStatus();
+
+
+useActionState
+- update state based on the status of an action (pending, success, error)
+- can be used to show loading indicators, success messages, error messages, etc. based on the status of an action.
+const [state, formAction] = useActionState(fn, initialState);
+
+useTransition
+- used to manage transitions between different states in a component, such as loading states or UI updates.
+- can be used to show a loading indicator while a component is transitioning to a new state, and then update the UI once the transition is complete.
+const [isPending, startTransition] = useTransition();
